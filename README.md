@@ -1,7 +1,9 @@
 emobage
 ===
 
-A [zim module](https://github.com/zimfw/zimfw) that randomly shows a cute kaomoji in your iTerm2 badge.
+A [zim module](https://github.com/zimfw/zimfw) that randomly shows a cute kaomoji in your iTerm2 [badge](https://iterm2.com/documentation-badges.html).
+
+![image](https://7365f31.webp.li/docs/1775246183.png)
 
 Behavior
 --------

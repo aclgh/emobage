@@ -1,8 +1,9 @@
 emobage
 ===
 
-一个[zim module](https://github.com/zimfw/zimfw)为你的 Iterm2 终端的 Badge 随机展示一个可爱的颜文字
+一个[zim module](https://github.com/zimfw/zimfw)为你的 Iterm2 终端的 [Badge](https://iterm2.com/documentation-badges.html) 随机展示一个可爱的颜文字
 
+![image](https://7365f31.webp.li/docs/1775246183.png)
 Behavior
 --------
 
