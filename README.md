@@ -1,39 +1,39 @@
 emobage
 ===
 
-为你的 Iterm2 终端的 Badge 随机展示一个可爱的颜文字
+A [zim module](https://github.com/zimfw/zimfw) that randomly shows a cute kaomoji in your iTerm2 badge.
 
 Behavior
 --------
 
-  * 每次进入提示符（`precmd`）时，从内置 `kaomoji` 列表随机选择一个颜文字并写入 Badge。
-  * 执行命令前（`preexec`）会根据匹配规则清空 Badge
-  * 默认会清空 Badge 的命令模式：`nvim*`、`vim*`、`less*`、`man*`
+  * On every prompt render (`precmd`), it randomly picks one kaomoji from the built-in `kaomoji` list and writes it to the badge.
+  * Before command execution (`preexec`), it clears the badge when the command matches configured patterns.
+  * Default clear patterns are: `nvim*`, `vim*`, `less*`, `man*`.
 
 Advanced settings
 -----------------
 
-你可以通过环境变量覆盖默认的 clear 列表：
+You can override the default clear list using an environment variable:
 
 	export EMOBAGE_CLEAR_BADGE_CMDS='nvim* vim* less* man*'
 
-这个变量使用空格分隔多个模式，支持 zsh pattern
+This variable accepts space-separated patterns and supports zsh patterns.
 
-例如，增加 `bat` 与 `fzf`：
+For example, to also clear on `bat` and `fzf`:
 
 	export EMOBAGE_CLEAR_BADGE_CMDS='nvim* vim* less* man* bat* fzf*'
 
-建议把这行放在 `~/.zshrc` 里，并且位于初始化模块之前
+It is recommended to put this line in `~/.zshrc`, before module initialization.
 
 Requirements
 ------------
 
-  * iTerm2（Badge escape sequence: `\e]1337;SetBadgeFormat=...\a`）
-  * `base64` 命令可用（macOS 默认可用）
+  * iTerm2 (badge escape sequence: `\e]1337;SetBadgeFormat=...\a`)
+  * `base64` command available (included by default on macOS)
 
 Installation (zimfw)
 --------------------
 
-在 `~/.zimrc` 中加入：
+Add this to `~/.zimrc`:
 
 	zmodule aclgh/emobage
